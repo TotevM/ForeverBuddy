@@ -1,0 +1,118 @@
+:root {
+    --primary: #ff7e5f;
+    --primary-light: #ffecd2;
+    --primary-dark: #fcb69f;
+    --footer-bg: #fcb69f;
+    --header-bg: #fff;
+    --text: #222;
+    --font: 'Segoe UI', Arial, sans-serif;
+    --container-max: 900px;
+    --header-height: 64px;
+    --footer-height: 64px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    color: var(--text);
+    background: #f9fafb;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+.site-header {
+    background: var(--header-bg);
+    box-shadow: 0 2px 8px rgba(252, 182, 159, 0.08);
+    height: var(--header-height);
+    min-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: var(--header-height);
+}
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+}
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover, .nav-links .nav-cta {
+    background: var(--primary);
+    color: #fff;
+}
+.nav-cta {
+    margin-left: 0.7rem;
+    font-weight: 500;
+}
+footer {
+    background: var(--footer-bg);
+    color: #fff;
+    text-align: center;
+    height: var(--footer-height);
+    min-height: var(--footer-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    width: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    mask-image: linear-gradient(to top, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to top, black 90%, transparent 100%);
+}
+
+footer .container {
+    padding: 0 1rem;
+    width: 100%;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 1.2rem 0.5rem;
+    }
+    .nav-logo {
+        font-size: 1.1rem;
+    }
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+    footer {
+        font-size: 0.95rem;
+    }
+}

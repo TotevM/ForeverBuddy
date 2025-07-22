@@ -65,13 +65,16 @@ if (testimonials.length > 0) {
     }
 }
 
-// Enquiry Form Submission
-const enquiryForm = document.querySelector('.enquiry-form');
-const formSuccess = document.querySelector('.form-success');
-if (enquiryForm) {
-    enquiryForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        enquiryForm.style.display = 'none';
-        if (formSuccess) formSuccess.style.display = 'block';
+// FAQ Accordion (only on faq.html)
+if (window.location.pathname.includes('faq.html')) {
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            faqItems.forEach(i => {
+                if (i !== item) i.classList.remove('open');
+            });
+            item.classList.toggle('open');
+        });
     });
 }
