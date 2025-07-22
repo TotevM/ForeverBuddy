@@ -1,0 +1,212 @@
+/* Reset and base styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f9fafb;
+    color: #222;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header/Nav */
+.site-header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(252, 182, 159, 0.08);
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff7e5f;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+.nav-links a {
+    color: #222;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover, .nav-links .nav-cta {
+    background: #ff7e5f;
+    color: #fff;
+}
+.nav-cta {
+    margin-left: 0.7rem;
+    font-weight: 500;
+}
+
+/* Hero Section with Puppy Image */
+.hero {
+    background: linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 3.5rem 1rem 2.5rem 1rem;
+    text-align: center;
+}
+.hero-img-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+.puppy-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(252, 182, 159, 0.18);
+    background: #fff;
+}
+.hero-text {
+    max-width: 350px;
+    text-align: left;
+}
+.hero-text h1 {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+}
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+.hero-text .cta-button {
+    margin-top: 0.5rem;
+}
+
+/* Testimonials with PFP */
+.testimonial-carousel {
+    position: relative;
+    min-height: 110px;
+}
+.testimonial {
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.1rem;
+    font-size: 1.1rem;
+    padding: 1rem 0.5rem;
+    transition: opacity 0.5s;
+}
+.testimonial.active {
+    display: flex;
+    opacity: 1;
+}
+.testimonial-pfp {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffecd2;
+    box-shadow: 0 2px 8px rgba(252, 182, 159, 0.18);
+}
+.testimonial-content {
+    text-align: left;
+}
+.testimonial-content span {
+    display: block;
+    margin-top: 0.5rem;
+    color: #ff7e5f;
+    font-weight: 500;
+}
+
+/* Remove enquiry form styles (moved to contact.css) */
+.enquiry, .enquiry-form, .form-success {
+    display: none !important;
+}
+
+/* Testimonials */
+.testimonials {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(252, 182, 159, 0.08);
+    margin: 2rem 0;
+    padding: 2rem 0 1.5rem 0;
+    text-align: center;
+}
+.testimonials h2 {
+    margin-bottom: 1.2rem;
+}
+.testimonial-controls {
+    margin-top: 1rem;
+}
+.testimonial-controls button {
+    background: #fcb69f;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.testimonial-controls button:hover {
+    background: #ff7e5f;
+}
+
+/* About Section */
+.about-us {
+    text-align: center;
+    margin: 2rem 0 1.5rem 0;
+}
+.about-us h2 {
+    margin-bottom: 0.7rem;
+}
+
+/* Footer */
+footer {
+    background: #fcb69f;
+    color: #fff;
+    text-align: center;
+    padding: 1.2rem 0 1rem 0;
+    border-radius: 18px 18px 0 0;
+    margin-top: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 800px) {
+    .hero-img-text {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .hero-text {
+        text-align: center;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 1.2rem 0.5rem;
+    }
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+    .puppy-img {
+        width: 140px;
+        height: 140px;
+    }
+    .enquiry, .testimonials {
+        padding: 1.2rem 0 1rem 0;
+    }
+}
