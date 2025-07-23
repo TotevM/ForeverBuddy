@@ -7,7 +7,47 @@
     width: 100%;
 }
 
-/* Enhanced Hero Section */
+.mobile-break {
+    display: none;
+}
+@media (max-width: 700px) {
+    .mobile-break {
+        display: inline;
+    }
+}
+
+.happy-tails-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ff9800;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  
+.testimonial-name-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.5em;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.stars {
+  color: #FFD700;
+  font-size: 1.4em;
+  letter-spacing: 0.08em;
+  margin-left: 0.3em;
+  vertical-align: middle;
+  text-shadow: 0 1px 4px #fff7f0;
+}
+
 .hero {
     background: linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);
     padding: 3.5rem 1rem 2.5rem 1rem;
@@ -111,11 +151,13 @@
 .testimonial-content {
     text-align: left;
 }
-.testimonial-content span {
-    display: block;
-    margin-top: 0.5rem;
-    color: #ff7e5f;
-    font-weight: 500;
+.testimonial-content :nth-child(1) {
+    font-weight: 600;
+    color: #333;
+  display: flex;
+  margin-top: 0.5rem;
+  color: #ff7e5f;
+  font-weight: 500;
 }
 
 .enquiry, .enquiry-form, .form-success {
@@ -136,6 +178,10 @@
 .testimonial-controls {
     margin-top: 1rem;
 }
+.testimonial-content p{
+    text-align: start;
+}
+
 .testimonial-controls button {
     background: #fcb69f;
     border: none;
@@ -174,7 +220,6 @@
         width: 100%;
         max-width: 100%;
         min-width: 0;
-        overflow: auto;
     }
     .puppy-img {
         height: 180px;
@@ -183,8 +228,9 @@
     .hero-text {
         align-items: center;
         text-align: center;
-        padding: 1.5rem 1rem;
+        padding: inherit;
         box-shadow: none;
+        padding-bottom: 1em;
     }
     .hero-text h1 {
         font-size: 1.5rem;
@@ -192,5 +238,13 @@
     .hero-text .cta-button {
         font-size: 1.1rem;
         padding: 1rem 2rem;
+    }
+
+    .hero-text p{
+        max-width: 35ch
+    }
+
+    .testimonial-content p{
+        max-width: 30ch;
     }
 }
