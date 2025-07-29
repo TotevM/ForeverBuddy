@@ -25,8 +25,18 @@
     display: inline-block;
 }
 .contact-hero-content h1 {
-    font-size: 2rem;
-    margin: 0;
+    font-size: 2.7rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, #ff7e5f 0%, #eb5757 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 2px 4px 18px #fcb69f88, 0 2px 8px #fff6;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 0.04em;
+    border-bottom: 4px solid #ff7e5f;
+    display: inline-block;
+    padding-bottom: 0.2em;
 }
 .contact-form-section {
     max-width: 600px;
@@ -55,19 +65,26 @@
     min-height: 70px;
 }
 .cta-button {
-    background: #ff7e5f;
+    background: linear-gradient(90deg, #ff7e5f 0%, #feb47b 100%);
     color: #fff;
-    padding: 0.9rem 2.2rem;
+    padding: 1.2rem 2.8rem;
     border: none;
-    border-radius: 30px;
-    font-size: 1.1rem;
+    border-radius: 40px;
+    font-size: 1.25rem;
+    font-weight: 700;
     cursor: pointer;
     text-decoration: none;
-    transition: background 0.2s;
-    box-shadow: 0 2px 8px rgba(252, 182, 159, 0.2);
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 18px 0 rgba(252, 182, 159, 0.35), 0 1.5px 8px 0 #ff7e5f44;
+    letter-spacing: 0.03em;
+    outline: none;
+    position: relative;
+    z-index: 1;
 }
-.cta-button:hover {
-    background: #eb5757;
+.cta-button:hover, .cta-button:focus {
+    background: linear-gradient(90deg, #eb5757 0%, #ff7e5f 100%);
+    transform: scale(1.06) translateY(-2px);
+    box-shadow: 0 8px 32px 0 rgba(252, 182, 159, 0.45), 0 2.5px 12px 0 #ff7e5f66;
 }
 .form-success {
     color: #27ae60;
