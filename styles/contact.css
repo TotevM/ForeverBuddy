@@ -11,13 +11,18 @@
     align-items: center;
     gap: 1.2rem;
 }
-.contact-puppy-img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 24px;
+.contact-hero-message {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ff7e5f;
+    background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 1.1rem 1.5rem;
+    border-radius: 16px;
     box-shadow: 0 4px 24px rgba(252, 182, 159, 0.18);
-    background: #fff;
+    margin-top: 0.7rem;
+    margin-bottom: 0.2rem;
+    text-shadow: 1px 2px 8px #fff6;
+    display: inline-block;
 }
 .contact-hero-content h1 {
     font-size: 2rem;
@@ -40,10 +45,10 @@
 }
 .enquiry-form input,
 .enquiry-form textarea {
-    padding: 0.7rem 1rem;
+    padding: 1.2rem 1.3rem;
     border: 1px solid #fcb69f;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 1.18rem;
     resize: none;
 }
 .enquiry-form textarea {
