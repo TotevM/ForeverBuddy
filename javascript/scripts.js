@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Testimonial Carousel
 const testimonials = document.querySelectorAll('.testimonial-carousel .testimonial');
 const prevBtn = document.querySelector('.prev-testimonial');
 const nextBtn = document.querySelector('.next-testimonial');
@@ -65,7 +64,6 @@ if (testimonials.length > 0) {
     }
 }
 
-// FAQ Accordion (only on faq.html)
 if (window.location.pathname.includes('faq.html')) {
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {

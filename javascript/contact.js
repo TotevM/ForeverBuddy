@@ -14,12 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         if (!valid) return;
-        form.style.opacity = 1;
-        form.style.transition = 'opacity 0.5s';
-        form.style.opacity = 0;
-        setTimeout(() => {
-            form.style.display = 'none';
-            if (success) success.style.display = 'block';
-        }, 500);
+        
+        if (success) {
+            success.style.display = 'block';
+            success.style.opacity = '0';
+            success.style.transform = 'translateY(-10px)';
+            
+            setTimeout(() => {
+                success.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                success.style.opacity = '1';
+                success.style.transform = 'translateY(0)';
+            }, 10);
+            
+            setTimeout(() => {
+                success.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                success.style.opacity = '0';
+                success.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    success.style.display = 'none';
+                }, 500);
+            }, 3000);
+        }
+        
+        form.reset();
     });
 }); 

@@ -88,9 +88,17 @@
 }
 .form-success {
     color: #27ae60;
-    font-weight: 500;
-    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 1rem;
     text-align: center;
+    padding: 1rem 1.5rem;
+    background: rgba(39, 174, 96, 0.1);
+    border: 2px solid #27ae60;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(39, 174, 96, 0.15);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: none;
 }
 
 @media (max-width: 600px) {
@@ -106,6 +114,11 @@
     }
     .enquiry-form {
         padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+    }
+    .form-success {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+        margin-top: 0.8rem;
     }
 }
 .shake {
