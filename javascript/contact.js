@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const success = document.querySelector('.form-success');
     if (!form) return;
     form.addEventListener('submit', function(e) {
+
         e.preventDefault();
+        
         let valid = true;
         form.querySelectorAll('input, textarea').forEach(input => {
             if (!input.value.trim()) {
